@@ -25,6 +25,7 @@ public class Hotel {
 		this.rent = rent;
 		this.status = status;
 		
+		
 	}
 	
 	@Override
