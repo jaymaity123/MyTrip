@@ -33,21 +33,12 @@ public class Route {
 		this.pickupPoint = pickupPoint;
 		this.fare = fare;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((arrivalTime == null) ? 0 : arrivalTime.hashCode());
-		result = prime * result + ((buses == null) ? 0 : buses.hashCode());
-		result = prime * result + ((departureTime == null) ? 0 : departureTime.hashCode());
-		result = prime * result + ((doj == null) ? 0 : doj.hashCode());
-		long temp;
-		temp = Double.doubleToLongBits(fare);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((pickupPoint == null) ? 0 : pickupPoint.hashCode());
-		result = prime * result + ((routeFrom == null) ? 0 : routeFrom.hashCode());
 		result = prime * result + ((routeId == null) ? 0 : routeId.hashCode());
-		result = prime * result + ((routeTo == null) ? 0 : routeTo.hashCode());
 		return result;
 	}
 	@Override
@@ -59,47 +50,10 @@ public class Route {
 		if (getClass() != obj.getClass())
 			return false;
 		Route other = (Route) obj;
-		if (arrivalTime == null) {
-			if (other.arrivalTime != null)
-				return false;
-		} else if (!arrivalTime.equals(other.arrivalTime))
-			return false;
-		if (buses == null) {
-			if (other.buses != null)
-				return false;
-		} else if (!buses.equals(other.buses))
-			return false;
-		if (departureTime == null) {
-			if (other.departureTime != null)
-				return false;
-		} else if (!departureTime.equals(other.departureTime))
-			return false;
-		if (doj == null) {
-			if (other.doj != null)
-				return false;
-		} else if (!doj.equals(other.doj))
-			return false;
-		if (Double.doubleToLongBits(fare) != Double.doubleToLongBits(other.fare))
-			return false;
-		if (pickupPoint == null) {
-			if (other.pickupPoint != null)
-				return false;
-		} else if (!pickupPoint.equals(other.pickupPoint))
-			return false;
-		if (routeFrom == null) {
-			if (other.routeFrom != null)
-				return false;
-		} else if (!routeFrom.equals(other.routeFrom))
-			return false;
 		if (routeId == null) {
 			if (other.routeId != null)
 				return false;
 		} else if (!routeId.equals(other.routeId))
-			return false;
-		if (routeTo == null) {
-			if (other.routeTo != null)
-				return false;
-		} else if (!routeTo.equals(other.routeTo))
 			return false;
 		return true;
 	}

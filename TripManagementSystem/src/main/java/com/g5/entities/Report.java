@@ -6,7 +6,7 @@ public class Report {
 	
 	private int reportId;
 	private String reportName;
-	private String reportType;
+	private String reportType; 
 	private Set<Booking> allBookings;
 	public Report() {
 		super();

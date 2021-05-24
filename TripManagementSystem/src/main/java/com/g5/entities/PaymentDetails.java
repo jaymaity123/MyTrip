@@ -109,19 +109,12 @@ public class PaymentDetails {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((bankName == null) ? 0 : bankName.hashCode());
-		result = prime * result + (int) (cardNo ^ (cardNo >>> 32));
-		long temp;
-		temp = Double.doubleToLongBits(netAmount);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + paymentId;
-		result = prime * result + ((paymentMode == null) ? 0 : paymentMode.hashCode());
-		result = prime * result + ((paymentStatus == null) ? 0 : paymentStatus.hashCode());
-		result = prime * result + userId;
 		return result;
 	}
 	@Override
@@ -133,28 +126,7 @@ public class PaymentDetails {
 		if (getClass() != obj.getClass())
 			return false;
 		PaymentDetails other = (PaymentDetails) obj;
-		if (bankName == null) {
-			if (other.bankName != null)
-				return false;
-		} else if (!bankName.equals(other.bankName))
-			return false;
-		if (cardNo != other.cardNo)
-			return false;
-		if (Double.doubleToLongBits(netAmount) != Double.doubleToLongBits(other.netAmount))
-			return false;
 		if (paymentId != other.paymentId)
-			return false;
-		if (paymentMode == null) {
-			if (other.paymentMode != null)
-				return false;
-		} else if (!paymentMode.equals(other.paymentMode))
-			return false;
-		if (paymentStatus == null) {
-			if (other.paymentStatus != null)
-				return false;
-		} else if (!paymentStatus.equals(other.paymentStatus))
-			return false;
-		if (userId != other.userId)
 			return false;
 		return true;
 	}

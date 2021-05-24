@@ -15,13 +15,12 @@ public class User {
 		this.userType = userType;
 		this.password = password;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + userId;
-		result = prime * result + ((userType == null) ? 0 : userType.hashCode());
 		return result;
 	}
 	@Override
@@ -33,17 +32,7 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
 		if (userId != other.userId)
-			return false;
-		if (userType == null) {
-			if (other.userType != null)
-				return false;
-		} else if (!userType.equals(other.userType))
 			return false;
 		return true;
 	}

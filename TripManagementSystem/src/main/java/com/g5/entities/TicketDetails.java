@@ -48,11 +48,11 @@ public class TicketDetails {
 		this.status = status;
 	}
 
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((ticketId == null) ? 0 : ticketId.hashCode());
 		return result;
 	}
@@ -66,11 +66,6 @@ public class TicketDetails {
 		if (getClass() != obj.getClass())
 			return false;
 		TicketDetails other = (TicketDetails) obj;
-		if (status == null) {
-			if (other.status != null)
-				return false;
-		} else if (!status.equals(other.status))
-			return false;
 		if (ticketId == null) {
 			if (other.ticketId != null)
 				return false;

@@ -13,6 +13,9 @@ public interface IPackageService {
 	public  Package  searchPackage(int packageId) throws PackageNotFoundException;
 	public  List<Package> viewAllPackages();
 	
-	
-
+	/*
+	 * package-> iflak feedback,report,route-> himagani,jaydeep
+	 * user,travels->harsha, iflak bookings and cust-> harsh service interface impl,
+	 * spring controller-> url(parameter, json)-> facebook/frnds
+	 */
 }
