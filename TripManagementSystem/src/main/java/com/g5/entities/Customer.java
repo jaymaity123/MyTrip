@@ -18,6 +18,55 @@ public class Customer extends User {
 		this.mobileNo = mobileNo;
 		this.email = email;
 	}
+	
+	/**
+	 * @return the customerName
+	 */
+	public String getCustomerName() {
+		return customerName;
+	}
+	/**
+	 * @param customerName the customerName to set
+	 */
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+	/**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	/**
+	 * @return the mobileNo
+	 */
+	public String getMobileNo() {
+		return mobileNo;
+	}
+	/**
+	 * @param mobileNo the mobileNo to set
+	 */
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

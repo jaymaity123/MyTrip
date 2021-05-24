@@ -126,21 +126,15 @@ public class Package {
 		this.hotel = hotel;
 	}
 
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((hotel == null) ? 0 : hotel.hashCode());
-		long temp;
-		temp = Double.doubleToLongBits(packageCost);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((packageDescription == null) ? 0 : packageDescription.hashCode());
 		result = prime * result + packageId;
-		result = prime * result + ((packageName == null) ? 0 : packageName.hashCode());
-		result = prime * result + ((packageType == null) ? 0 : packageType.hashCode());
-		result = prime * result + ((route == null) ? 0 : route.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -150,34 +144,7 @@ public class Package {
 		if (getClass() != obj.getClass())
 			return false;
 		Package other = (Package) obj;
-		if (hotel == null) {
-			if (other.hotel != null)
-				return false;
-		} else if (!hotel.equals(other.hotel))
-			return false;
-		if (Double.doubleToLongBits(packageCost) != Double.doubleToLongBits(other.packageCost))
-			return false;
-		if (packageDescription == null) {
-			if (other.packageDescription != null)
-				return false;
-		} else if (!packageDescription.equals(other.packageDescription))
-			return false;
 		if (packageId != other.packageId)
-			return false;
-		if (packageName == null) {
-			if (other.packageName != null)
-				return false;
-		} else if (!packageName.equals(other.packageName))
-			return false;
-		if (packageType == null) {
-			if (other.packageType != null)
-				return false;
-		} else if (!packageType.equals(other.packageType))
-			return false;
-		if (route == null) {
-			if (other.route != null)
-				return false;
-		} else if (!route.equals(other.route))
 			return false;
 		return true;
 	}

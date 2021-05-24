@@ -83,15 +83,13 @@ public class Feedback {
 	public void setSubmitDate(LocalDate submitDate) {
 		this.submitDate = submitDate;
 	}
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((customer == null) ? 0 : customer.hashCode());
-		result = prime * result + ((feedback == null) ? 0 : feedback.hashCode());
 		result = prime * result + ((feedbackId == null) ? 0 : feedbackId.hashCode());
-		result = prime * result + rating;
-		result = prime * result + ((submitDate == null) ? 0 : submitDate.hashCode());
 		return result;
 	}
 	@Override
@@ -103,27 +101,10 @@ public class Feedback {
 		if (getClass() != obj.getClass())
 			return false;
 		Feedback other = (Feedback) obj;
-		if (customer == null) {
-			if (other.customer != null)
-				return false;
-		} else if (!customer.equals(other.customer))
-			return false;
-		if (feedback == null) {
-			if (other.feedback != null)
-				return false;
-		} else if (!feedback.equals(other.feedback))
-			return false;
 		if (feedbackId == null) {
 			if (other.feedbackId != null)
 				return false;
 		} else if (!feedbackId.equals(other.feedbackId))
-			return false;
-		if (rating != other.rating)
-			return false;
-		if (submitDate == null) {
-			if (other.submitDate != null)
-				return false;
-		} else if (!submitDate.equals(other.submitDate))
 			return false;
 		return true;
 	}

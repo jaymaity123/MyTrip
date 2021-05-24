@@ -79,15 +79,12 @@ public class Travels {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((address == null) ? 0 : address.hashCode());
-		result = prime * result + ((agentName == null) ? 0 : agentName.hashCode());
-		result = prime * result + ((contact == null) ? 0 : contact.hashCode());
 		result = prime * result + travelsId;
-		result = prime * result + ((travelsName == null) ? 0 : travelsName.hashCode());
 		return result;
 	}
 	@Override
@@ -99,27 +96,7 @@ public class Travels {
 		if (getClass() != obj.getClass())
 			return false;
 		Travels other = (Travels) obj;
-		if (address == null) {
-			if (other.address != null)
-				return false;
-		} else if (!address.equals(other.address))
-			return false;
-		if (agentName == null) {
-			if (other.agentName != null)
-				return false;
-		} else if (!agentName.equals(other.agentName))
-			return false;
-		if (contact == null) {
-			if (other.contact != null)
-				return false;
-		} else if (!contact.equals(other.contact))
-			return false;
 		if (travelsId != other.travelsId)
-			return false;
-		if (travelsName == null) {
-			if (other.travelsName != null)
-				return false;
-		} else if (!travelsName.equals(other.travelsName))
 			return false;
 		return true;
 	}
